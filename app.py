@@ -18,4 +18,4 @@ async def generate(payload: dict):
             raise HTTPException(status_code=504, detail="Request to the server timed out") from e
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000,ssl_keyfile="./ssl_certificate/myclearkey.pem", ssl_certfile="./ssl_certificate/cert.pem")
+    uvicorn.run(app, host="0.0.0.0", port=8000,ssl_keyfile="./myclearkey.pem", ssl_certfile="./cert.pem")
