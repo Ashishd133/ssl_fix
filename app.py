@@ -8,7 +8,7 @@ app = FastAPI()
 async def generate(payload: dict):
     async with httpx.AsyncClient(timeout=60) as client:  # Set timeout to 60 seconds
         try:
-            response = await client.post("http://98.70.112.24:11434/api/generate", json=payload)
+            response = await client.post("http://0.0.0.0:11434/api/generate", json=payload)
             response.raise_for_status()
             response=response.json()
             return response['response']
